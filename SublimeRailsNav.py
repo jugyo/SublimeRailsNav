@@ -358,7 +358,7 @@ class ListRailsStylesheetsCommand(RailsCommandBase):
         if not self.setup():
             return
         dirs = self.get_setting('stylesheet_locations')
-        self.show_files(dirs, '\.(?:s?css)$')
+        self.show_files(dirs, '\.(?:css|scss|less)$')
 
     def is_listing_current_file_group(self, current_file):
         return 'stylesheets' in current_file
